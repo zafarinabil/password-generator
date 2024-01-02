@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password generator</title>
+    <link rel="shortcut icon" href="images/techover.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300&family=Outfit:wght@300&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div id="passwordContainer">
+                <input class="pass" type="text" id="password" readonly>
+                <img id="copy" src="images/copy-icon.svg" alt="">
+            </div>
+
+            <div class="second-container">
+                <div class="second">
+                    <div class="length">
+                        <label class="password-length" for="length">Password Length</label>
+                    <br>
+                    <input type="range" id="length" min="6" max="20" value="10">
+                    </div>
+                    <span class="number" id="lengthValue">10</span>
+                </div>
+                <div class="form">
+                    <div class="form-opt">
+                    <div>
+                        <input class="check" type="checkbox" id="uppercase" checked>
+                        <label class="text" for="uppercase">Include uppercase letters</label>
+                    </div>
+                    <div>
+                        <input class="check" type="checkbox" id="lowercase" checked>
+                        <label class="text" for="lowercase">Include lowercase letters</label>
+                    </div>
+
+                    <div>
+                        <input class="check" type="checkbox" id="numbers" checked>
+                        <label class="text" for="numbers">Include numbers</label>
+                    </div>
+
+                    <div>
+                        <input class="check" type="checkbox" id="special" checked>
+                        <label class="text" for="special">Include symbols</label>
+                    </div>
+
+                    </div>
+
+                    <div id="strengthContainer">
+                        <label style="color: black;" class="strength-text" for="strength">Strength</label>
+                        <div class="strength-boxes">
+                            <div style="font-size: 12px;" class="power"></div>    
+                            <div id="strength" style="background-color: none; width: 12px; height: 40px; "></div>
+                            <div id="strength" style="background-color: none; width: 12px; height: 40px; "></div>
+                            <div id="strength" style="background-color: none; width: 12px; height: 40px; "></div>
+                            <div id="strength" style="background-color: none; width: 12px; height: 40px; "></div>
+                        </div>
+                        <!-- <meter id="strength" min="0" max="100" value="0"></meter> -->
+                    </div>
+                    <br>
+                    <button id="generate">Generate</button>
+                    <br>
+
+                </div>
+            </div>
+            <img class="techover" src="images/techover-logo.png" alt="techover">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
